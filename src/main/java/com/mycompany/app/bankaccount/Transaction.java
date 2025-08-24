@@ -1,10 +1,12 @@
 import com.mycompany.app.bankaccount.enums.Operation;
+import com.mycompany.app.bankaccount.valueobjects.BankId;
+import com.mycompany.app.bankaccount.valueobjects.TransactionId;
 import java.time.LocalDateTime;
 
 public record Transaction(
     LocalDateTime timestamp,
-    String transactionId,
+    TransactionId transactionId,
     Operation operation,
-    String senderBankId,
-    String targetBankId
+    BankId senderBankId,
+    BankId targetBankId
 ) {}
