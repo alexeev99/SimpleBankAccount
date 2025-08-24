@@ -5,8 +5,11 @@ import com.mycompany.app.bankaccount.exceptions.PositiveAmountEuroNegativeValueE
 public class PositiveAmountEuro {
 
     private double positiveAmountEuro;
+    private int SMALLEST_AMOUNT_EURO = 0;
 
-    public PositiveAmountEuro(double positiveAmountEuro) {
+    public PositiveAmountEuro(double positiveAmountEuro)
+        throws PositiveAmountEuroNegativeValueException {
+        this.validateAmountGreaterThanZero(positiveAmountEuro);
         this.positiveAmountEuro = positiveAmountEuro;
     }
 
@@ -25,12 +28,14 @@ public class PositiveAmountEuro {
     ) throws PositiveAmountEuroNegativeValueException {
         double positiveAmountEuroSum =
             this.positiveAmountEuro - otherPositiveAmountEuro.toDouble();
-        int smallestAllowedBalance = 0;
-        if (positiveAmountEuroSum < smallestAllowedBalance) {
-            throw new PositiveAmountEuroNegativeValueException(
-                positiveAmountEuroSum
-            );
-        }
+        this.validateAmountGreaterThanZero(positiveAmountEuroSum);
         return new PositiveAmountEuro(positiveAmountEuroSum);
+    }
+
+    private void validateAmountGreaterThanZero(double amountEuro)
+        throws PositiveAmountEuroNegativeValueException {
+        if (amountEuro < SMALLEST_AMOUNT_EURO) {
+            throw new PositiveAmountEuroNegativeValueException(amountEuro);
+        }
     }
 }
