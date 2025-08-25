@@ -23,4 +23,6 @@ public abstract class BankAccount {
     public abstract void deposit(PositiveAmountEuro amountEuro);
 
     public abstract PositiveAmountEuro balance();
+
+    public abstract BankId getBankId();
 }
