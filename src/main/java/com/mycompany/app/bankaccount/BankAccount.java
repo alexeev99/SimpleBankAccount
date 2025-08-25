@@ -3,6 +3,7 @@ package com.mycompany.app.bankaccount;
 import com.mycompany.app.bankaccount.exceptions.BankAccountNegativeAmountEuroWithdrawException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
+import com.mycompany.app.bankaccount.valueobjects.Transaction;
 import java.util.HashMap;
 import java.util.Map;
 
