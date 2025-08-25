@@ -1,3 +1,5 @@
+package com.mycompany.app.bankaccount;
+
 import com.mycompany.app.bankaccount.enums.Operation;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.TransactionId;

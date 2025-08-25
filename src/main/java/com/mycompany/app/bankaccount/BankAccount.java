@@ -1,4 +1,5 @@
-import com.mycompany.app.bankaccount.Transaction;
+package com.mycompany.app.bankaccount;
+
 import com.mycompany.app.bankaccount.exceptions.BankAccountNegativeAmountEuroWithdrawException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
@@ -11,14 +12,14 @@ public abstract class BankAccount {
     protected PositiveAmountEuro amountEuro = new PositiveAmountEuro(0);
     protected BankId bankId;
 
-    public BankAccount(BankId bankId, PositiveAmountEuro amountEuro) {}
+    protected BankAccount(BankId bankId, PositiveAmountEuro amountEuro) {}
 
-    public BankAccount(BankId bankId) {}
+    protected BankAccount(BankId bankId) {}
 
-    public PositiveAmountEuro withdraw(PositiveAmountEuro amountEuro)
-        throws BankAccountNegativeAmountEuroWithdrawException {}
+    public abstract PositiveAmountEuro withdraw(PositiveAmountEuro amountEuro)
+        throws BankAccountNegativeAmountEuroWithdrawException;
 
-    public void deposit(PositiveAmountEuro amountEuro) {}
+    public abstract void deposit(PositiveAmountEuro amountEuro);
 
-    public PositiveAmountEuro balance() {}
+    public abstract PositiveAmountEuro balance();
 }

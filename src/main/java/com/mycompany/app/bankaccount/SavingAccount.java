@@ -1,4 +1,5 @@
-import com.mycompany.app.bankaccount.BankAccount;
+package com.mycompany.app.bankaccount;
+
 import com.mycompany.app.bankaccount.exceptions.BankAccountNegativeAmountEuroWithdrawException;
 import com.mycompany.app.bankaccount.exceptions.PositiveAmountEuroNegativeValueException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;

@@ -1,3 +1,5 @@
+package com.mycompany.app.bankaccount.exceptions;
+
 public class BankAccountNegativeAmountEuroWithdrawException
     extends RuntimeException {
 
