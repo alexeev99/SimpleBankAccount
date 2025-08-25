@@ -38,4 +38,8 @@ public class SavingAccount extends BankAccount {
     public PositiveAmountEuro balance() {
         return this.amountEuro;
     }
+
+    public BankId getBankId() {
+        return this.bankId;
+    }
 }
