@@ -6,5 +6,4 @@ public record CustomerUserConsoleInput(
     String cityOfBirth,
     String birthDate,
     String taxId,
-    CustomerAddressUserConsoleInput address
-) {}
+    CustomerAddressUserConsoleInput address) {}

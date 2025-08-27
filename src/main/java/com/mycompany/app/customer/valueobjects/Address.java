@@ -4,5 +4,4 @@ public record Address(
     NormalizedString city,
     PostalCode postalCode,
     StreetNumber streetNumber,
-    NormalizedString streetName
-) {}
+    NormalizedString streetName) {}

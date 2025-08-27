@@ -1,6 +1,7 @@
 package com.mycompany.app.bankaccount.valueobjects;
 
 import com.mycompany.app.bankaccount.enums.Operation;
+
 import java.time.LocalDateTime;
 
 public record Transaction(
@@ -8,5 +9,4 @@ public record Transaction(
     TransactionId transactionId,
     Operation operation,
     BankId senderBankId,
-    BankId targetBankId
-) {}
+    BankId targetBankId) {}

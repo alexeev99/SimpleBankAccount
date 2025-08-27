@@ -4,14 +4,14 @@ import java.util.UUID;
 
 public class TransactionId {
 
-    private final UUID transactionId;
+  private final UUID transactionId;
 
-    public TransactionId() {
-        this.transactionId = UUID.randomUUID();
-    }
+  public TransactionId() {
+    this.transactionId = UUID.randomUUID();
+  }
 
-    @Override
-    public String toString() {
-        return this.transactionId.toString();
-    }
+  @Override
+  public String toString() {
+    return this.transactionId.toString();
+  }
 }

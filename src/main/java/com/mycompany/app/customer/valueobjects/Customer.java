@@ -9,5 +9,4 @@ public record Customer(
     NormalizedString cityOfBirth,
     LocalDate birthDate,
     Address address,
-    TaxId taxId
-) {}
+    TaxId taxId) {}

@@ -4,14 +4,14 @@ import java.util.UUID;
 
 public class CustomerId {
 
-    private final UUID customerId;
+  private final UUID customerId;
 
-    public CustomerId() {
-        this.customerId = UUID.randomUUID();
-    }
+  public CustomerId() {
+    this.customerId = UUID.randomUUID();
+  }
 
-    @Override
-    public String toString() {
-        return this.customerId.toString();
-    }
+  @Override
+  public String toString() {
+    return this.customerId.toString();
+  }
 }
