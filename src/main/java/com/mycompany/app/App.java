@@ -1,5 +1,6 @@
 package com.mycompany.app;
 
+import com.mycompany.app.usecases.BankAccountCreationUseCase;
 import com.mycompany.app.userconsole.InitialUserConsole;
 
 /**
@@ -16,6 +17,8 @@ public class App {
             InitialUserConsole.printNewLine();
 
             String nextOperation = InitialUserConsole.readUserInput().trim();
+            InitialUserConsole.printNewLine();
+            InitialUserConsole.printNewLine();
 
             if ("initial".equals(state)) {
                 if ("1".equals(nextOperation)) {
@@ -31,7 +34,9 @@ public class App {
                 }
             }
 
-            if ("createBankAccount".equals(state)) {}
+            if ("createBankAccount".equals(state)) {
+                BankAccountCreationUseCase.execute();
+            }
         }
     }
 }
