@@ -1,13 +1,13 @@
 package com.mycompany.app.customer.valueobjects;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public record Customer(
     CustomerId customerId,
-    String firstName,
-    String lastName,
-    String cityOfBirth,
-    LocalDateTime birthDate,
+    NormalizedString firstName,
+    NormalizedString lastName,
+    NormalizedString cityOfBirth,
+    LocalDate birthDate,
     Address address,
     TaxId taxId
 ) {}

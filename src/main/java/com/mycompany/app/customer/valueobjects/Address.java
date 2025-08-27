@@ -1,8 +1,8 @@
 package com.mycompany.app.customer.valueobjects;
 
 public record Address(
-    String city,
+    NormalizedString city,
     PostalCode postalCode,
-    int streetNumber,
-    String street
+    StreetNumber streetNumber,
+    NormalizedString streetName
 ) {}
