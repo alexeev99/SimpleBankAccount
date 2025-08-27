@@ -17,6 +17,10 @@ public class BankAccountCreationUserConsole {
         System.out.print("customer information\n");
     }
 
+    public static void printBankAccountSuccessfullyCreated() {
+        System.out.print("Successfully created a saving bank account\n");
+    }
+
     public static CustomerUserConsoleInput readCustomer() {
         CustomerAddressUserConsoleInput address =
             BankAccountCreationUserConsole.readCustomerAddress();

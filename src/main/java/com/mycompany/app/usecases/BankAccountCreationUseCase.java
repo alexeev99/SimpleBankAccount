@@ -1,5 +1,7 @@
 package com.mycompany.app.usecases;
 
+import com.mycompany.app.bankaccount.SavingAccount;
+import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.customer.valueobjects.Address;
 import com.mycompany.app.customer.valueobjects.Customer;
 import com.mycompany.app.customer.valueobjects.CustomerId;
@@ -20,6 +22,11 @@ public class BankAccountCreationUseCase {
         BankAccountCreationUserConsole.printNewLine();
         Customer customer =
             BankAccountCreationUseCase.createCustomerFromUserConsole();
+        BankId bankId = new BankId();
+        SavingAccount savingAccount = new SavingAccount(bankId);
+        BankAccountCreationUserConsole.printNewLine();
+        BankAccountCreationUserConsole.printBankAccountSuccessfullyCreated();
+        BankAccountCreationUserConsole.printNewLine();
     }
 
     private static Customer createCustomerFromUserConsole() {
