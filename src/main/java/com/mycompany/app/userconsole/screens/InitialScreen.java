@@ -5,19 +5,22 @@ import com.mycompany.app.userconsole.UserConsoleScreen;
 public class InitialScreen {
   private static final String TEXT =
       """
-          Welcome to the SimpleBankApp!
+      Welcome to the SimpleBankApp!
 
-          With which operatoin do you want to proceed ?
+      With which operation do you want to proceed ?
 
-          Type in the corresponding number (e.g. 1, 2, 3, ...)
-          in order to proceed with your chosen operation.
+      Type in the corresponding number (e.g. 1, 2, 3, ...)
+      in order to proceed with your chosen operation.
 
-         1. Create a new Bank Account
+      1. Create a new Bank Account
+
+      Type in 'c' to terminate the application.
+
+      Your input: \
       """;
   private static UserConsoleScreen initialScreen = new UserConsoleScreen(TEXT);
 
-  @Override
-  public String toString() {
+  public static String getText() {
     return InitialScreen.initialScreen.toString();
   }
 }
