@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import com.mycompany.app.usecases.BankAccountCreationUseCase;
 import com.mycompany.app.userconsole.screens.InitialScreen;
+import com.mycompany.app.userconsole.screens.InvalidOperationScreen;
 import com.mycompany.app.userconsole.screens.TerminationScreen;
 import java.util.Scanner;
 
@@ -21,6 +22,11 @@ public class App {
         case "c" -> {
           System.out.print(TerminationScreen.getText());
           return;
+        }
+        default -> {
+          System.out.print(InvalidOperationScreen.getText());
+          System.out.println();
+          System.out.println();
         }
       }
     }
