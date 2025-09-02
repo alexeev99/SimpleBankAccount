@@ -1,6 +1,6 @@
 package com.mycompany.app.usecases;
 
-import com.mycompany.app.bankaccount.SavingAccount;
+import com.mycompany.app.bankaccount.BankAccountManager;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.customer.valueobjects.Address;
 import com.mycompany.app.customer.valueobjects.Customer;
@@ -24,7 +24,8 @@ public class BankAccountCreationUseCase {
     System.out.println();
     Customer customer = readCustomerFromUserConsole();
     BankId bankId = new BankId();
-    SavingAccount savingAccount = new SavingAccount(bankId);
+    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    bankAccountManager.create(bankId);
     System.out.println();
     System.out.println();
     SuccessfulCreationScreen.setSuccessfulTextFormatting(
