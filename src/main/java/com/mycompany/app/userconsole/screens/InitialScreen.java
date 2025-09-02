@@ -13,6 +13,7 @@ public class InitialScreen {
       in order to proceed with your chosen operation.
 
       1. Create a new Bank Account
+      2. Deposit money into a Bank Account
 
       Type in 'c' to terminate the application.
 
