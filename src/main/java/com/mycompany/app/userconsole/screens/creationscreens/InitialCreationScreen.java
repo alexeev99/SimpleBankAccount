@@ -36,42 +36,42 @@ public class InitialCreationScreen {
       new UserConsoleScreen(ADDRESS_STREET_NUMBER_INPUT);
 
   public static String getWelcomeText() {
-    return BankAccountCreationScreen.welcomeText.toString();
+    return InitialCreationScreen.welcomeText.toString();
   }
 
   public static String getFirstNameText() {
-    return BankAccountCreationScreen.firstNameInput.toString();
+    return InitialCreationScreen.firstNameInput.toString();
   }
 
   public static String getLastNameText() {
-    return BankAccountCreationScreen.lastNameInput.toString();
+    return InitialCreationScreen.lastNameInput.toString();
   }
 
   public static String getBirthDateInput() {
-    return BankAccountCreationScreen.birthDateInput.toString();
+    return InitialCreationScreen.birthDateInput.toString();
   }
 
   public static String getCityOfBirthText() {
-    return BankAccountCreationScreen.cityOfBirthInput.toString();
+    return InitialCreationScreen.cityOfBirthInput.toString();
   }
 
   public static String getTaxIdText() {
-    return BankAccountCreationScreen.taxIdInput.toString();
+    return InitialCreationScreen.taxIdInput.toString();
   }
 
   public static String getAddressCityText() {
-    return BankAccountCreationScreen.addressCityInput.toString();
+    return InitialCreationScreen.addressCityInput.toString();
   }
 
   public static String getAddressPostalCodeText() {
-    return BankAccountCreationScreen.addressPostalCodeInput.toString();
+    return InitialCreationScreen.addressPostalCodeInput.toString();
   }
 
   public static String getAddressStreetNameText() {
-    return BankAccountCreationScreen.addressStreetNameInput.toString();
+    return InitialCreationScreen.addressStreetNameInput.toString();
   }
 
   public static String getAddressStreetNumberText() {
-    return BankAccountCreationScreen.addressStreetNumberInput.toString();
+    return InitialCreationScreen.addressStreetNumberInput.toString();
   }
 }
