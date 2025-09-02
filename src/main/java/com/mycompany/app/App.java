@@ -1,39 +1,33 @@
 package com.mycompany.app;
 
 import com.mycompany.app.usecases.BankAccountCreationUseCase;
-import com.mycompany.app.userconsole.InitialUserConsole;
+import com.mycompany.app.userconsole.screens.InitialScreen;
+import com.mycompany.app.userconsole.screens.InvalidOperationScreen;
+import com.mycompany.app.userconsole.screens.TerminationScreen;
+import java.util.Scanner;
 
-/** Hello world! */
 public class App {
 
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     while (true) {
-      String state = "initial";
-      InitialUserConsole.printOperationMenu();
-      InitialUserConsole.printNewLine();
-      InitialUserConsole.printTerminationHint();
-      InitialUserConsole.printNewLine();
 
-      String nextOperation = InitialUserConsole.readUserInput().trim();
-      InitialUserConsole.printNewLine();
-      InitialUserConsole.printNewLine();
+      System.out.print(InitialScreen.getText());
+      String input = scanner.nextLine();
+      System.out.println();
+      System.out.println();
 
-      if ("initial".equals(state)) {
-        if ("1".equals(nextOperation)) {
-          state = "createBankAccount";
-        } else if ("c".equals(nextOperation)) {
-          InitialUserConsole.printTerminationNotification();
-          break;
-        } else {
-          InitialUserConsole.printInvalidInput();
-          InitialUserConsole.printNewLine();
-          InitialUserConsole.printNewLine();
-          InitialUserConsole.printNewLine();
+      switch (input) {
+        case "1" -> BankAccountCreationUseCase.execute();
+        case "c" -> {
+          System.out.print(TerminationScreen.getText());
+          return;
         }
-      }
-
-      if ("createBankAccount".equals(state)) {
-        BankAccountCreationUseCase.execute();
+        default -> {
+          System.out.print(InvalidOperationScreen.getText());
+          System.out.println();
+          System.out.println();
+        }
       }
     }
   }
