@@ -9,7 +9,7 @@ import com.mycompany.app.customer.valueobjects.NormalizedString;
 import com.mycompany.app.customer.valueobjects.PostalCode;
 import com.mycompany.app.customer.valueobjects.StreetNumber;
 import com.mycompany.app.customer.valueobjects.TaxId;
-import com.mycompany.app.userconsole.screens.BankAccountCreationScreen;
+import com.mycompany.app.userconsole.screens.creationscreens.InitialCreationScreen;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class BankAccountCreationUseCase {
   public static final Scanner scanner = new Scanner(System.in);
 
   public static void execute() {
-    System.out.print(BankAccountCreationScreen.getWelcomeText());
+    System.out.print(InitialCreationScreen.getWelcomeText());
     System.out.println();
     System.out.println();
     Customer customer = readCustomerFromUserConsole2();
@@ -43,63 +43,63 @@ public class BankAccountCreationUseCase {
   }
 
   private static NormalizedString readCustomerFirstName() {
-    System.out.print(BankAccountCreationScreen.getFirstNameText());
+    System.out.print(InitialCreationScreen.getFirstNameText());
     String firstNameString = scanner.nextLine();
     NormalizedString firstName = new NormalizedString(firstNameString);
     return firstName;
   }
 
   private static NormalizedString readCustomerLastName() {
-    System.out.print(BankAccountCreationScreen.getLastNameText());
+    System.out.print(InitialCreationScreen.getLastNameText());
     String lastNameString = scanner.nextLine();
     NormalizedString lastName = new NormalizedString(lastNameString);
     return lastName;
   }
 
   private static NormalizedString readCustomerCityOfBirth() {
-    System.out.print(BankAccountCreationScreen.getCityOfBirthText());
+    System.out.print(InitialCreationScreen.getCityOfBirthText());
     String cityOfBirthString = scanner.nextLine();
     NormalizedString cityOfBirth = new NormalizedString(cityOfBirthString);
     return cityOfBirth;
   }
 
   private static LocalDate readCustomerBirthDate() {
-    System.out.print(BankAccountCreationScreen.getBirthDateInput());
+    System.out.print(InitialCreationScreen.getBirthDateInput());
     String birthDateString = scanner.nextLine();
     LocalDate birthDate = LocalDate.parse(birthDateString);
     return birthDate;
   }
 
   private static TaxId readCustomerTaxId() {
-    System.out.print(BankAccountCreationScreen.getTaxIdText());
+    System.out.print(InitialCreationScreen.getTaxIdText());
     String taxIdString = scanner.nextLine();
     TaxId taxId = new TaxId(taxIdString);
     return taxId;
   }
 
   private static NormalizedString readCustomerAddressCity() {
-    System.out.print(BankAccountCreationScreen.getAddressCityText());
+    System.out.print(InitialCreationScreen.getAddressCityText());
     String addressCityString = scanner.nextLine();
     NormalizedString addressCity = new NormalizedString(addressCityString);
     return addressCity;
   }
 
   private static PostalCode readCustomerAddressPostalCode() {
-    System.out.print(BankAccountCreationScreen.getAddressPostalCodeText());
+    System.out.print(InitialCreationScreen.getAddressPostalCodeText());
     String addressPostalCodeString = scanner.nextLine();
     PostalCode addressPostalCode = new PostalCode(addressPostalCodeString);
     return addressPostalCode;
   }
 
   private static NormalizedString readCustomerAddressStreetName() {
-    System.out.print(BankAccountCreationScreen.getAddressStreetNameText());
+    System.out.print(InitialCreationScreen.getAddressStreetNameText());
     String addressStreetNameString = scanner.nextLine();
     NormalizedString addressStreetName = new NormalizedString(addressStreetNameString);
     return addressStreetName;
   }
 
   private static StreetNumber readCustomerStreetNumber() {
-    System.out.print(BankAccountCreationScreen.getAddressStreetNumberText());
+    System.out.print(InitialCreationScreen.getAddressStreetNumberText());
     String addressStreetNumberString = scanner.nextLine();
     StreetNumber addressStreetName = new StreetNumber(addressStreetNumberString);
     return addressStreetName;

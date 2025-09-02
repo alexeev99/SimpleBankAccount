@@ -1,8 +1,8 @@
-package com.mycompany.app.userconsole.screens;
+package com.mycompany.app.userconsole.screens.creationscreens;
 
 import com.mycompany.app.userconsole.UserConsoleScreen;
 
-public class BankAccountCreationScreen {
+public class InitialCreationScreen {
   private static final String WELCOME_TEXT =
       """
       Welcome to bank account creation process!
