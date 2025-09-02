@@ -8,10 +8,27 @@ import java.util.Map;
 
 public class BankAccountManager {
 
+  private static BankAccountManager instance;
+
+  private BankAccountManager() {}
+
+  public static BankAccountManager getInstance() {
+    if (instance == null) {
+      instance = new BankAccountManager();
+    }
+    return instance;
+  }
+
   private Map<BankId, SavingAccount> bankAccounts = new HashMap<>();
 
   public SavingAccount create(BankId bankId, PositiveAmountEuro amountEuro) {
     SavingAccount bankAccount = new SavingAccount(bankId, amountEuro);
+    this.bankAccounts.put(bankId, bankAccount);
+    return bankAccount;
+  }
+
+  public SavingAccount create(BankId bankId) {
+    SavingAccount bankAccount = new SavingAccount(bankId);
     this.bankAccounts.put(bankId, bankAccount);
     return bankAccount;
   }
