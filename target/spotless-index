@@ -1,14 +1,14 @@
 9LrVJya83/39h9A+tCyE2bAlL9zPDHdEvs1iSKsND4g=
-src/main/java/com/mycompany/app/App.java 2025-08-30T21:16:39.146236637Z
+src/main/java/com/mycompany/app/App.java 2025-09-02T20:55:06.413131115Z
 src/main/java/com/mycompany/app/bankaccount/BankAccount.java 2025-08-30T21:16:39.146236637Z
-src/main/java/com/mycompany/app/bankaccount/BankAccountManager.java 2025-08-30T21:16:39.146236637Z
+src/main/java/com/mycompany/app/bankaccount/BankAccountManager.java 2025-09-02T20:48:20.564274941Z
 src/main/java/com/mycompany/app/bankaccount/SavingAccount.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/enums/Operation.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/exceptions/BankAccountNegativeAmountEuroCreationException.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/exceptions/BankAccountNegativeAmountEuroDepositException.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/exceptions/BankAccountNegativeAmountEuroWithdrawException.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/exceptions/PositiveAmountEuroNegativeValueException.java 2025-08-30T21:16:39.146236637Z
-src/main/java/com/mycompany/app/bankaccount/valueobjects/BankId.java 2025-08-30T21:16:39.146236637Z
+src/main/java/com/mycompany/app/bankaccount/valueobjects/BankId.java 2025-09-02T20:47:01.332618890Z
 src/main/java/com/mycompany/app/bankaccount/valueobjects/PositiveAmountEuro.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/valueobjects/Transaction.java 2025-08-30T21:16:39.146236637Z
 src/main/java/com/mycompany/app/bankaccount/valueobjects/TransactionId.java 2025-08-30T21:16:39.146236637Z
@@ -24,9 +24,9 @@ src/main/java/com/mycompany/app/customer/valueobjects/NormalizedString.java 2025
 src/main/java/com/mycompany/app/customer/valueobjects/PostalCode.java 2025-08-30T21:16:39.149570046Z
 src/main/java/com/mycompany/app/customer/valueobjects/StreetNumber.java 2025-08-30T21:16:39.149570046Z
 src/main/java/com/mycompany/app/customer/valueobjects/TaxId.java 2025-08-30T21:16:39.149570046Z
-src/main/java/com/mycompany/app/usecases/BankAccountCreationUseCase.java 2025-08-30T21:16:39.149570046Z
-src/main/java/com/mycompany/app/userconsole/BankAccountCreationUserConsole.java 2025-08-30T21:16:39.149570046Z
-src/main/java/com/mycompany/app/userconsole/InitialUserConsole.java 2025-08-30T21:16:39.149570046Z
-src/main/java/com/mycompany/app/userconsole/valueobjects/CustomerAddressUserConsoleInput.java 2025-08-30T21:16:39.149570046Z
-src/main/java/com/mycompany/app/userconsole/valueobjects/CustomerUserConsoleInput.java 2025-08-30T21:16:39.149570046Z
+src/main/java/com/mycompany/app/usecases/BankAccountCreationUseCase.java 2025-09-02T20:55:06.413131115Z
+src/main/java/com/mycompany/app/userconsole/BankAccountCreationUserConsole.java 2025-09-02T20:55:06.413131115Z
+src/main/java/com/mycompany/app/userconsole/InitialUserConsole.java 2025-09-02T20:55:06.413131115Z
+src/main/java/com/mycompany/app/userconsole/valueobjects/CustomerAddressUserConsoleInput.java 2025-09-02T20:55:06.413131115Z
+src/main/java/com/mycompany/app/userconsole/valueobjects/CustomerUserConsoleInput.java 2025-09-02T20:55:06.416464523Z
 src/test/java/com/mycompany/app/AppTest.java 2025-08-30T21:16:39.152903455Z
