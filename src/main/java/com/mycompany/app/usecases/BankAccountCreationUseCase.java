@@ -10,6 +10,7 @@ import com.mycompany.app.customer.valueobjects.PostalCode;
 import com.mycompany.app.customer.valueobjects.StreetNumber;
 import com.mycompany.app.customer.valueobjects.TaxId;
 import com.mycompany.app.userconsole.screens.creationscreens.InitialCreationScreen;
+import com.mycompany.app.userconsole.screens.creationscreens.SuccessfulCreationScreen;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -21,12 +22,19 @@ public class BankAccountCreationUseCase {
     System.out.print(InitialCreationScreen.getWelcomeText());
     System.out.println();
     System.out.println();
-    Customer customer = readCustomerFromUserConsole2();
+    Customer customer = readCustomerFromUserConsole();
     BankId bankId = new BankId();
     SavingAccount savingAccount = new SavingAccount(bankId);
+    System.out.println();
+    System.out.println();
+    SuccessfulCreationScreen.setSuccessfulTextFormatting(
+        customer.firstName().toString(), customer.lastName().toString(), bankId.toString());
+    System.out.print(SuccessfulCreationScreen.getSuccessfulText());
+    System.out.println();
+    System.out.println();
   }
 
-  private static Customer readCustomerFromUserConsole2() {
+  private static Customer readCustomerFromUserConsole() {
     CustomerId customerId = new CustomerId();
     NormalizedString firstName = readCustomerFirstName();
     NormalizedString lastName = readCustomerLastName();
