@@ -19,15 +19,15 @@ public class InitialDepositScreen {
   private static final UserConsoleScreen monetaryAmountEurInput =
       new UserConsoleScreen(MONETARY_AMOUNT_EUR_INPUT);
 
-  private static String getWelcomeText() {
+  public static String getWelcomeText() {
     return InitialDepositScreen.welcomeText.toString();
   }
 
-  private static String getBankIdText() {
+  public static String getBankIdText() {
     return InitialDepositScreen.bankIdInput.toString();
   }
 
-  private static String getMonetaryAmountEurText() {
+  public static String getMonetaryAmountEurText() {
     return InitialDepositScreen.monetaryAmountEurInput.toString();
   }
 }
