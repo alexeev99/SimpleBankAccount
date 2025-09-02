@@ -19,22 +19,23 @@ public class BankAccountManager {
     return instance;
   }
 
-  private Map<BankId, SavingAccount> bankAccounts = new HashMap<>();
+  private Map<String, SavingAccount> bankAccounts = new HashMap<>();
 
   public SavingAccount create(BankId bankId, PositiveAmountEuro amountEuro) {
     SavingAccount bankAccount = new SavingAccount(bankId, amountEuro);
-    this.bankAccounts.put(bankId, bankAccount);
+    this.bankAccounts.put(bankId.toString(), bankAccount);
     return bankAccount;
   }
 
   public SavingAccount create(BankId bankId) {
     SavingAccount bankAccount = new SavingAccount(bankId);
-    this.bankAccounts.put(bankId, bankAccount);
+    this.bankAccounts.put(bankId.toString(), bankAccount);
+    System.out.println(this.bankAccounts);
     return bankAccount;
   }
 
   public SavingAccount find(BankId bankId) throws BankAccountManagerCouldNotFindAccountException {
-    SavingAccount bankAccount = this.bankAccounts.get(bankId);
+    SavingAccount bankAccount = this.bankAccounts.get(bankId.toString());
     if (bankAccount == null) {
       throw new BankAccountManagerCouldNotFindAccountException(bankId.toString());
     }
