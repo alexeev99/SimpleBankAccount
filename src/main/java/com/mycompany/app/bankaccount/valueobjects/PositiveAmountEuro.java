@@ -1,5 +1,6 @@
 package com.mycompany.app.bankaccount.valueobjects;
 
+import com.mycompany.app.bankaccount.exceptions.PositiveAmountEuroInvalidStringException;
 import com.mycompany.app.bankaccount.exceptions.PositiveAmountEuroNegativeValueException;
 
 public class PositiveAmountEuro {
@@ -11,6 +12,13 @@ public class PositiveAmountEuro {
       throws PositiveAmountEuroNegativeValueException {
     this.validateAmountGreaterThanZero(positiveAmountEuro);
     this.positiveAmountEuro = positiveAmountEuro;
+  }
+
+  public PositiveAmountEuro(String positiveAmountEuro)
+      throws PositiveAmountEuroNegativeValueException, PositiveAmountEuroInvalidStringException {
+    Double positiveAmountEuroDouble = this.transformStringToDouble(positiveAmountEuro);
+    this.validateAmountGreaterThanZero(positiveAmountEuroDouble);
+    this.positiveAmountEuro = positiveAmountEuroDouble;
   }
 
   public double toDouble() {
@@ -34,5 +42,16 @@ public class PositiveAmountEuro {
     if (amountEuro < SMALLEST_AMOUNT_EURO) {
       throw new PositiveAmountEuroNegativeValueException(amountEuro);
     }
+  }
+
+  private double transformStringToDouble(String amountEuro)
+      throws PositiveAmountEuroInvalidStringException {
+    double amountEuroDouble;
+    try {
+      amountEuroDouble = Double.parseDouble(amountEuro);
+    } catch (NumberFormatException e) {
+      throw new PositiveAmountEuroInvalidStringException(amountEuro);
+    }
+    return amountEuroDouble;
   }
 }
