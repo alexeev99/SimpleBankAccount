@@ -18,7 +18,8 @@ public class SavingAccount extends BankAccount {
     this.bankId = bankId;
   }
 
-  public PositiveAmountEuro withdraw(PositiveAmountEuro amountEuro) {
+  public PositiveAmountEuro withdraw(PositiveAmountEuro amountEuro)
+      throws BankAccountNegativeAmountEuroWithdrawException {
     PositiveAmountEuro newAmountEuro;
     try {
       newAmountEuro = this.amountEuro.subtract(amountEuro);
