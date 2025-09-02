@@ -9,9 +9,15 @@ public class SuccessfulDepositScreen {
       with following bank ID: '%s'
       """;
 
-  private static final UserConsoleScreen successfulText = new UserConsoleScreen(SUCCESSFUL_TEXT);
+  private static UserConsoleScreen successfulText = new UserConsoleScreen(SUCCESSFUL_TEXT);
 
   public static String getSuccessfulText() {
     return SuccessfulDepositScreen.successfulText.toString();
+  }
+
+  public static void setSuccessfulTextFormatting(Double positiveAmountEuro, String bankId) {
+    String formattedText =
+        String.format(SuccessfulDepositScreen.SUCCESSFUL_TEXT, positiveAmountEuro, bankId);
+    SuccessfulDepositScreen.successfulText = new UserConsoleScreen(formattedText);
   }
 }
