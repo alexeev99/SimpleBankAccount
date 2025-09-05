@@ -30,14 +30,14 @@ public class BankAccountManager {
   public SavingAccount create(BankId bankId) {
     SavingAccount bankAccount = new SavingAccount(bankId);
     this.bankAccounts.put(bankId.toString(), bankAccount);
-    System.out.println(this.bankAccounts);
     return bankAccount;
   }
 
   public SavingAccount find(BankId bankId) throws BankAccountManagerCouldNotFindAccountException {
-    SavingAccount bankAccount = this.bankAccounts.get(bankId.toString());
+    String bankIdString = bankId.toString();
+    SavingAccount bankAccount = this.bankAccounts.get(bankIdString);
     if (bankAccount == null) {
-      throw new BankAccountManagerCouldNotFindAccountException(bankId.toString());
+      throw new BankAccountManagerCouldNotFindAccountException(bankIdString);
     }
     return bankAccount;
   }
