@@ -1,6 +1,6 @@
 package com.mycompany.app.usecases;
 
-import com.mycompany.app.bankaccount.BankAccountManager;
+import com.mycompany.app.bankaccount.BankAccountManagerSingleton;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
 import com.mycompany.app.userconsole.screens.depositscreens.InitialDepositScreen;
@@ -17,7 +17,7 @@ public class BankAccountDepositUseCase {
     System.out.println();
 
     BankId bankId = BankAccountDepositUseCase.readBankId();
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
     bankAccountManager.find(bankId);
     PositiveAmountEuro positiveAmountEuro = BankAccountDepositUseCase.readPositiveAmountEuro();
     System.out.println();

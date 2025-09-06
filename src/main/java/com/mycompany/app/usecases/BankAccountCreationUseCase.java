@@ -1,6 +1,6 @@
 package com.mycompany.app.usecases;
 
-import com.mycompany.app.bankaccount.BankAccountManager;
+import com.mycompany.app.bankaccount.BankAccountManagerSingleton;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.customer.valueobjects.Address;
 import com.mycompany.app.customer.valueobjects.Customer;
@@ -24,7 +24,7 @@ public class BankAccountCreationUseCase {
     System.out.println();
     Customer customer = readCustomerFromUserConsole();
     BankId bankId = new BankId();
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
     bankAccountManager.create(bankId);
     System.out.println();
     System.out.println();
