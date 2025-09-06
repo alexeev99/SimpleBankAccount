@@ -6,15 +6,15 @@ import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BankAccountManager {
+public class BankAccountManagerSingleton {
 
-  private static BankAccountManager instance;
+  private static BankAccountManagerSingleton instance;
 
-  private BankAccountManager() {}
+  private BankAccountManagerSingleton() {}
 
-  public static BankAccountManager getInstance() {
+  public static BankAccountManagerSingleton getInstance() {
     if (instance == null) {
-      instance = new BankAccountManager();
+      instance = new BankAccountManagerSingleton();
     }
     return instance;
   }

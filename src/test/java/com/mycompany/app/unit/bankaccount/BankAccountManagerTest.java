@@ -3,7 +3,7 @@ package com.mycompany.app.unit.bankaccount;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.mycompany.app.bankaccount.BankAccountManager;
+import com.mycompany.app.bankaccount.BankAccountManagerSingleton;
 import com.mycompany.app.bankaccount.SavingAccount;
 import com.mycompany.app.bankaccount.exceptions.BankAccountManagerCouldNotFindAccountException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
@@ -15,15 +15,15 @@ class BankAccountManagerTest {
 
   @Test
   void shouldFetchAlwaysTheSameInstance() {
-    BankAccountManager bankAccountManager1 = BankAccountManager.getInstance();
-    BankAccountManager bankAccountManager2 = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager1 = BankAccountManagerSingleton.getInstance();
+    BankAccountManagerSingleton bankAccountManager2 = BankAccountManagerSingleton.getInstance();
 
     assertEquals(bankAccountManager1, bankAccountManager2);
   }
 
   @Test
   void shouldCreateNewBankAccount() {
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
 
     BankId bankId = new BankId();
     String bankIdString1 = bankId.toString();
@@ -36,7 +36,7 @@ class BankAccountManagerTest {
 
   @Test
   void shouldFindBankAccount() {
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
 
     BankId bankId = new BankId();
     String bankIdString1 = bankId.toString();
@@ -51,7 +51,7 @@ class BankAccountManagerTest {
 
   @Test
   void shouldThrowExceptionWhenCannotFindBankAccount() {
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
 
     BankId bankId = new BankId();
     String bankIdString1 = bankId.toString();
@@ -69,7 +69,7 @@ class BankAccountManagerTest {
 
   @Test
   void shouldDepositIntoBankAccount() {
-    BankAccountManager bankAccountManager = BankAccountManager.getInstance();
+    BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
     Double positiveAmountEuroDouble = 10.0;
 
     BankId bankId = new BankId();
