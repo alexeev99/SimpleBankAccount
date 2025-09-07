@@ -7,8 +7,32 @@ import com.mycompany.app.userconsole.screens.InvalidOperationScreen;
 import com.mycompany.app.userconsole.screens.TerminationScreen;
 import java.util.Scanner;
 
+/**
+ * Entry point for the SimpleBankApp console application. <br>
+ * <br>
+ * The {@code App} class provides a simple text-based menu loop that allows users to perform various
+ * banking operations. Depending on user input, different use cases are triggered.
+ *
+ * <p>The available options are:
+ *
+ * <ul>
+ *   <li><b>1</b> – Create a new bank account (via {@link BankAccountCreationUseCase})
+ *   <li><b>2</b> – Deposit money into an existing account (via {@link BankAccountDepositUseCase})
+ *   <li><b>c</b> – Terminate the application (via {@link TerminationScreen})
+ *   <li>Any other input – Show an invalid operation message (via {@link InvalidOperationScreen})
+ * </ul>
+ *
+ * <p>The loop continues until the user explicitly chooses to terminate the application.
+ */
 public class App {
 
+  /**
+   * Main entry point of the application. <br>
+   * Displays the initial screen, reads user input, and executes the corresponding use case until
+   * termination is requested.
+   *
+   * @param args command-line arguments (not used)
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     while (true) {
