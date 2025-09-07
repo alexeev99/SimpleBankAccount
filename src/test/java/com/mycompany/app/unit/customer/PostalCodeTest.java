@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.app.customer.exceptions.PostalCodeInvalidFormatException;
 import com.mycompany.app.customer.valueobjects.PostalCode;
+
 import org.junit.jupiter.api.Test;
 
 class PostalCodeTest {

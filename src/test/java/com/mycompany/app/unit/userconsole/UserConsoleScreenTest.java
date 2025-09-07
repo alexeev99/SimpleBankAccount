@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.mycompany.app.userconsole.UserConsoleLine;
 import com.mycompany.app.userconsole.UserConsoleScreen;
+
 import java.lang.reflect.Field;
 import java.util.Map;
 import org.junit.jupiter.api.Test;

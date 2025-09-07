@@ -1,6 +1,7 @@
 package com.mycompany.app.bankaccount.valueobjects;
 
 import com.mycompany.app.bankaccount.exceptions.BankIdInvalidStringException;
+
 import java.util.UUID;
 
 /**

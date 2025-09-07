@@ -3,6 +3,7 @@ package com.mycompany.app.unit.customer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.mycompany.app.customer.valueobjects.CustomerId;
+
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;

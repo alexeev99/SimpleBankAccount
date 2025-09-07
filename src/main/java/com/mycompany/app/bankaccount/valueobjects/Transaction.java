@@ -1,6 +1,7 @@
 package com.mycompany.app.bankaccount.valueobjects;
 
 import com.mycompany.app.bankaccount.enums.Operation;
+
 import java.time.LocalDateTime;
 
 /**

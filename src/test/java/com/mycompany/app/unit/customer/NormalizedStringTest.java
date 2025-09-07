@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.app.customer.exceptions.NormalizedStringEmptyInputException;
 import com.mycompany.app.customer.valueobjects.NormalizedString;
+
 import org.junit.jupiter.api.Test;
 
 class NormalizedStringTest {

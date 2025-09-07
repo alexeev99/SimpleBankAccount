@@ -5,6 +5,7 @@ import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
 import com.mycompany.app.userconsole.screens.depositscreens.InitialDepositScreen;
 import com.mycompany.app.userconsole.screens.depositscreens.SuccessfulDepositScreen;
+
 import java.util.Scanner;
 
 /**

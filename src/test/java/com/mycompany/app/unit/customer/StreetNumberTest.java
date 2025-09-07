@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.app.customer.exceptions.StreetNumberNotIntegerException;
 import com.mycompany.app.customer.valueobjects.StreetNumber;
+
 import org.junit.jupiter.api.Test;
 
 class StreetNumberTest {
