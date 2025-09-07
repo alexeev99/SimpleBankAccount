@@ -59,11 +59,12 @@ public class BankAccountCreationUseCase {
     BankAccountManagerSingleton bankAccountManager = BankAccountManagerSingleton.getInstance();
     bankAccountManager.create(bankId);
 
+    SuccessfulCreationScreen.setSuccessfulTextFormatting(
+        customer.firstName().toString(), customer.lastName().toString(), bankId.toString());
+
     System.out.println();
     System.out.println();
 
-    SuccessfulCreationScreen.setSuccessfulTextFormatting(
-        customer.firstName().toString(), customer.lastName().toString(), bankId.toString());
     System.out.print(SuccessfulCreationScreen.getSuccessfulText());
     System.out.println();
     System.out.println();

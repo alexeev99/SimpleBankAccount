@@ -15,7 +15,7 @@ import com.mycompany.app.bankaccount.exceptions.PositiveAmountEuroNegativeValueE
 public class PositiveAmountEuro {
 
   private double positiveAmountEuro;
-  private int SMALLEST_AMOUNT_EURO = 0;
+  private static int SMALLEST_AMOUNT_EURO = 0;
 
   /**
    * Creates a new {@code PositiveAmountEuro} from a double value.
