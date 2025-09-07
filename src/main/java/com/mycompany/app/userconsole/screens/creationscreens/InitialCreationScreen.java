@@ -66,6 +66,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's first name.
+   *
    * @return the prompt asking the user to enter the customer's first name
    */
   public static String getFirstNameText() {
@@ -73,6 +75,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's last name.
+   *
    * @return the prompt asking the user to enter the customer's last name
    */
   public static String getLastNameText() {
@@ -80,6 +84,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's birth date.
+   *
    * @return the prompt asking the user to enter the customer's birth date
    */
   public static String getBirthDateInput() {
@@ -87,6 +93,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's city of birth.
+   *
    * @return the prompt asking the user to enter the customer's city of birth
    */
   public static String getCityOfBirthText() {
@@ -94,6 +102,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's tax ID.
+   *
    * @return the prompt asking the user to enter the customer's tax ID
    */
   public static String getTaxIdText() {
@@ -101,6 +111,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's city of residence.
+   *
    * @return the prompt asking the user to enter the customer's city of residence
    */
   public static String getAddressCityText() {
@@ -108,6 +120,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's postal code.
+   *
    * @return the prompt asking the user to enter the customer's postal code
    */
   public static String getAddressPostalCodeText() {
@@ -115,6 +129,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's street name.
+   *
    * @return the prompt asking the user to enter the customer's street name
    */
   public static String getAddressStreetNameText() {
@@ -122,6 +138,8 @@ public class InitialCreationScreen {
   }
 
   /**
+   * Returns the prompt text for entering the customer's street number.
+   *
    * @return the prompt asking the user to enter the customer's street number
    */
   public static String getAddressStreetNumberText() {
