@@ -3,6 +3,7 @@ package com.mycompany.app.unit.userconsole;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.mycompany.app.userconsole.UserConsoleString;
+
 import org.junit.jupiter.api.Test;
 
 class UserConsoleStringTest {

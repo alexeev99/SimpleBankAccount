@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.app.customer.exceptions.TaxIdInvalidFormatException;
 import com.mycompany.app.customer.valueobjects.TaxId;
+
 import org.junit.jupiter.api.Test;
 
 class TaxIdTest {

@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.app.bankaccount.exceptions.BankIdInvalidStringException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
+
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
