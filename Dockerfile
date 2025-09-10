@@ -7,6 +7,8 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -B
 
 COPY src ./src
+COPY .mvn ./.mvn
+COPY checkstyle-suppressions.xml ./checkstyle-suppressions.xml
 
 RUN mvn compile
 
@@ -21,6 +23,8 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -B
 
 COPY src ./src
+COPY .mvn ./.mvn
+COPY checkstyle-suppressions.xml ./checkstyle-suppressions.xml
 
 RUN mvn clean package -DskipTests
 
