@@ -136,13 +136,19 @@
                <compilerArgs>
                  <arg>-XDcompilePolicy=simple</arg>
                  <arg>--should-stop=ifError=FLOW</arg>
-                 <arg>-Xplugin:ErrorProne</arg>
+                 <arg
+                        >-Xplugin:ErrorProne -XepOpt:NullAway:AnnotatedPackages=com.mycompany.app</arg>
                </compilerArgs>
                <annotationProcessorPaths>
                  <path>
                    <groupId>com.google.errorprone</groupId>
                    <artifactId>error_prone_core</artifactId>
                    <version>${error-prone.version}</version>
+                 </path>
+                 <path>
+                    <groupId>com.uber.nullaway</groupId>
+                    <artifactId>nullaway</artifactId>
+                    <version>0.10.19</version>
                  </path>
                  <!-- Other annotation processors go here.
 
