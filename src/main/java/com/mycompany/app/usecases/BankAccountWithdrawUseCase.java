@@ -5,6 +5,7 @@ import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
 import com.mycompany.app.userconsole.screens.withdrawscreens.InitialWithdrawScreen;
 import com.mycompany.app.userconsole.screens.withdrawscreens.SuccessfulWithdrawScreen;
+
 import java.util.Scanner;
 
 /**
