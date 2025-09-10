@@ -6,6 +6,7 @@ import com.mycompany.app.usecases.BankAccountWithdrawUseCase;
 import com.mycompany.app.userconsole.screens.InitialScreen;
 import com.mycompany.app.userconsole.screens.InvalidOperationScreen;
 import com.mycompany.app.userconsole.screens.TerminationScreen;
+
 import java.util.Scanner;
 
 /**
