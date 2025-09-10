@@ -1,9 +1,9 @@
 package com.mycompany.app.bankaccount;
 
 import com.mycompany.app.bankaccount.exceptions.BankAccountManagerCouldNotFindAccountException;
+import com.mycompany.app.bankaccount.exceptions.BankAccountNegativeAmountEuroWithdrawException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -88,5 +88,19 @@ public class BankAccountManagerSingleton {
       throws BankAccountManagerCouldNotFindAccountException {
     SavingAccount bankAccount = this.find(bankId);
     bankAccount.deposit(amountEuro);
+  }
+
+  public PositiveAmountEuro getBalance(BankId bankId)
+      throws BankAccountManagerCouldNotFindAccountException {
+    SavingAccount bankAccount = this.find(bankId);
+    PositiveAmountEuro balance = bankAccount.balance();
+    return balance;
+  }
+
+  public void withdraw(BankId bankId, PositiveAmountEuro amountEuro)
+      throws BankAccountManagerCouldNotFindAccountException,
+          BankAccountNegativeAmountEuroWithdrawException {
+    SavingAccount bankAccount = this.find(bankId);
+    bankAccount.withdraw(amountEuro);
   }
 }
