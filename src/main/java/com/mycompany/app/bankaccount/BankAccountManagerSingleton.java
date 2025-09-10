@@ -1,6 +1,7 @@
 package com.mycompany.app.bankaccount;
 
 import com.mycompany.app.bankaccount.exceptions.BankAccountManagerCouldNotFindAccountException;
+import com.mycompany.app.bankaccount.exceptions.BankAccountNegativeAmountEuroWithdrawException;
 import com.mycompany.app.bankaccount.valueobjects.BankId;
 import com.mycompany.app.bankaccount.valueobjects.PositiveAmountEuro;
 
@@ -88,5 +89,33 @@ public class BankAccountManagerSingleton {
       throws BankAccountManagerCouldNotFindAccountException {
     SavingAccount bankAccount = this.find(bankId);
     bankAccount.deposit(amountEuro);
+  }
+
+  /**
+   * Retrieves the current balance of a bank account with the given ID.
+   *
+   * @param bankId the unique bank account ID
+   * @throws BankAccountManagerCouldNotFindAccountException if the account does not exist
+   */
+  public PositiveAmountEuro getBalance(BankId bankId)
+      throws BankAccountManagerCouldNotFindAccountException {
+    SavingAccount bankAccount = this.find(bankId);
+    PositiveAmountEuro balance = bankAccount.balance();
+    return balance;
+  }
+
+  /**
+   * Withdraws the specified amount from the bank account with the given ID.
+   *
+   * @param bankId the unique bank account ID
+   * @param amountEuro the amount to withdraw
+   * @throws BankAccountManagerCouldNotFindAccountException if the account does not exist
+   * @throws BankAccountNegativeAmountEuroWithdrawException if the balance goes below 0 euro
+   */
+  public void withdraw(BankId bankId, PositiveAmountEuro amountEuro)
+      throws BankAccountManagerCouldNotFindAccountException,
+          BankAccountNegativeAmountEuroWithdrawException {
+    SavingAccount bankAccount = this.find(bankId);
+    bankAccount.withdraw(amountEuro);
   }
 }

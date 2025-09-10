@@ -37,6 +37,7 @@ public class InitialScreen {
 
       1. Create a new Bank Account
       2. Deposit money into a Bank Account
+      3. Withdraw money from a Bank Account
 
       Type in 'c' to terminate the application.
 

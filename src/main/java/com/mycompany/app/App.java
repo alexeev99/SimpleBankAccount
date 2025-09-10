@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import com.mycompany.app.usecases.BankAccountCreationUseCase;
 import com.mycompany.app.usecases.BankAccountDepositUseCase;
+import com.mycompany.app.usecases.BankAccountWithdrawUseCase;
 import com.mycompany.app.userconsole.screens.InitialScreen;
 import com.mycompany.app.userconsole.screens.InvalidOperationScreen;
 import com.mycompany.app.userconsole.screens.TerminationScreen;
@@ -46,6 +47,7 @@ public class App {
       switch (input) {
         case "1" -> BankAccountCreationUseCase.execute();
         case "2" -> BankAccountDepositUseCase.execute();
+        case "3" -> BankAccountWithdrawUseCase.execute();
         case "c" -> {
           System.out.print(TerminationScreen.getText());
           return;
